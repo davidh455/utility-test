@@ -3,10 +3,6 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    public static void main(String[] args) {
-        double num = getDouble("Please enter a number");
-        System.out.println("You entered " + num);
-    }//end constructor
     public static double getDouble(String prompt){
         Scanner scanner = new Scanner(System.in);
         boolean gotDouble = false;//will be true when right data entered
