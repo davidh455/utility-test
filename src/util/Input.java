@@ -3,6 +3,25 @@ package util;
 import java.util.Scanner;
 
 public class Input {
+
+    public static int getInt(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        boolean gotInt = false;
+        int num = 0;
+
+        while (!gotInt) {
+            System.out.println(prompt);
+            String str = scanner.nextLine();
+            try {
+                num = Integer.parseInt(str);
+                gotInt = true;
+            } catch (Exception e) {
+                System.out.println(str + " is not a valid integer. Please enter a whole number.");
+            }
+        }
+        return num;
+    }
+
     public static double getDouble(String prompt){
         Scanner scanner = new Scanner(System.in);
         boolean gotDouble = false;//will be true when right data entered
